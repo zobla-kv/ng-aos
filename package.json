@@ -1,0 +1,20 @@
+{
+  "name": "ng-aos",
+  "version": "0.0.1",
+  "description": "Animate on scroll library for Angular",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=15.0.0 <21.0.0",
+    "@angular/animations": ">=15.0.0 <21.0.0",
+    "rxjs": ">=7"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@angular/core": "^20.0.0",
+    "@angular/animations": "^20.0.0"
+  }
+}
