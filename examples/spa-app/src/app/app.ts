@@ -1,20 +1,18 @@
-import { Component, signal } from '@angular/core';
+import { Component, ElementRef, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { NgAosDirective } from 'ng-aos';
-
-console.log('NgAosDirective: ', NgAosDirective);
+import { NgAos } from 'ng-aos';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgAosDirective],
+  imports: [RouterOutlet, NgAos],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('spa-app');
+  protected readonly title = signal('ssr-app');
 
-  handleIntersection(ev: any) {
+  handleIntersection(ev: ElementRef) {
     console.log('intersected ev: ', ev);
   }
 }

@@ -27,23 +27,66 @@
     transform: translateY(0px);
     opacity: 1;
   }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(-10px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes random-slide-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .random-slide-in {
+    /* animation-name + duration + delay + easing + fill-mode */
+    animation-name: random-slide-in;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /* keep final state */
+  }
 </style>
 
 <div class="wrapper">
   <div class="space-taker">take space and allow for scroll</div>
+  <!-- TODO: test all these cases -->
+  <!-- CASE 1 -->
   <div
     class="animated"
     ng-aos
     [hide]="{ opacity: '0', transform: 'translateY(40px)' }"
     [show]="{ opacity: '1', transform: 'translateY(0px)' }"
     [duration]="500"
-    [delay]="100"
     [threshold]="0.2"
     [easing]="'ease-in-out'"
     [rootMargin]="'50px'"
   >
     animated
   </div>
+
+  <!-- CASE 2 -->
+  <!-- <div class="animated" ng-aos aosClass="slide-up">animated</div> -->
+
+  <!-- CASE 3 -->
+  <!-- <div class="animated" ng-aos aosClass="slide-up" (intersection)="handleIntersection($event)">
+    animated
+  </div> -->
+
+  <!-- CASE 4 -->
+  <!-- <div class="animated" ng-aos [show]="{}" (intersection)="handleIntersection($event)"> -->
+  <!-- animated
+  </div> -->
 </div>
 
 <router-outlet />
