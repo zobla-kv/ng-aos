@@ -18,12 +18,32 @@
     margin-top: 200px;
     background-color: red;
     color: white;
+
+    transition: 1s;
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  .slide-up {
+    transform: translateY(0px);
+    opacity: 1;
   }
 </style>
 
 <div class="wrapper">
   <div class="space-taker">take space and allow for scroll</div>
-  <div class="animated">animated</div>
+  <div
+    class="animated"
+    ng-aos
+    [hide]="{ opacity: '0', transform: 'translateY(40px)' }"
+    [show]="{ opacity: '1', transform: 'translateY(0px)' }"
+    [duration]="500"
+    [delay]="100"
+    [threshold]="0.2"
+    [easing]="'ease-in-out'"
+    [rootMargin]="'50px'"
+  >
+    animated
+  </div>
 </div>
 
 <router-outlet />
