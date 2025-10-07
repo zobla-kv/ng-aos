@@ -40,7 +40,7 @@ yarn add ng-aos
 
 ## 🧩 How to use
 
-##### 1. Setup
+#### 1. Setup
 
 ```tsx
 // src/app/app.component.ts
@@ -60,9 +60,9 @@ export class AppComponent {}
 
 <br />
 
-##### 2. Usage
+#### 2. Usage
 
-###### a. Directive controlled animation
+##### a. Directive controlled animation
 
 ```tsx
 // src/app/app.component.html
@@ -100,7 +100,7 @@ export class AppComponent {}
 
 <br />
 
-###### b. CSS controlled animation
+##### b. CSS controlled animation
 
 Activated by providing `aosClass` input to the directive. When it is present, all other inputs are ignored and CSS becomes responsible for hiding/showing the element.
 
@@ -127,7 +127,7 @@ Activated by providing `aosClass` input to the directive. When it is present, al
 
 <br />
 
-###### c. Trigger an action without animation
+##### c. Trigger an action without animation
 
 By ommiting all inputs to the directive, and handling only output, it is possible to handle use case when you don't need animation, but rather want to do something when element enters the viewport.
 
@@ -145,6 +145,6 @@ onIntersect(el: ElementRef) {
 
 ---
 
-### Enjoy! 🎉
+## Enjoy! 🎉
 
 ---
