@@ -15,7 +15,7 @@ import { isPlatformBrowser } from '@angular/common';
 
 import type { Styles, Threshold, Easing } from '../types/Inputs';
 
-import { CssAnimationService } from './cssAnimation.service';
+import { CssAnimationService } from './cssAnimation';
 
 /**
  * Animate element when user scrolls it into view
