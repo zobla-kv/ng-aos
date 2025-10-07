@@ -1,21 +1,23 @@
 {
   "name": "ng-aos",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Animate on scroll directive for Angular",
   "type": "module",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "module": "./fesm2022/ng-aos.mjs",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./fesm2022/ng-aos.mjs",
+      "types": "./index.d.ts"
     }
   },
   "files": [
-    "dist"
+    "fesm2022",
+    "index.d.ts"
   ],
   "scripts": {
-    "build": "npx ng-packagr -p ng-package.json"
+    "build": "npx ng-packagr -p ng-package.json",
+    "publish": "cd dist && npm publish --access public"
   },
   "keywords": [
     "angular",
@@ -30,8 +32,8 @@
   },
   "homepage": "https://github.com/zobla-kv/ng-aos#readme",
   "peerDependencies": {
-    "@angular/common": ">=15.0.0 <21.0.0",
-    "@angular/core": ">=15.0.0 <21.0.0"
+    "@angular/common": ">=17.0.0 <21.0.0",
+    "@angular/core": ">=17.0.0 <21.0.0"
   },
   "devDependencies": {
     "@angular/common": "^20.3.0",
