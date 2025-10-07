@@ -28,12 +28,12 @@ export class NgAosDirective implements OnDestroy, OnInit {
   /**
    * Styles to apply when the element is hidden.
    */
-  @Input('hide') hideStyles: Styles = { opacity: '0' };
+  @Input('hide') hideStyles: Styles = {};
 
   /**
    * Styles to apply when the element becomes visible.
    */
-  @Input('show') showStyles: Styles = { opacity: '1' };
+  @Input('show') showStyles: Styles = {};
 
   /**
    * Duration of the show animation in milliseconds.
