@@ -24,7 +24,7 @@ import { CssAnimationService } from './cssAnimation';
   selector: '[ng-aos]',
   standalone: true,
 })
-export class NgAosDirective implements OnDestroy, OnInit {
+export class NgAos implements OnDestroy, OnInit {
   /**
    * Styles to apply when the element is hidden.
    */

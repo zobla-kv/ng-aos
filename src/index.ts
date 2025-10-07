@@ -1,1 +1,1 @@
-export { NgAosDirective } from './lib/aos';
+export { NgAos } from './lib/aos';
